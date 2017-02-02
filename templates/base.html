@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    {% block head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+    <title>FSFW Dresden</title>
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/fsfw.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ SITEURL }}/img/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ SITEURL }}/img/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ SITEURL }}/img/apple-touch-icon-76x76png">
+    <link rel="apple-touch-icon" href="{{ SITEURL }}/img/apple-touch-icon-60x60.png">
+    <link rel="profile" href="http://microformats.org/profile/hcalendar">
+    <link rel="profile" href="http://microformats.org/profile/hcard">
+    {% endblock %}
+  </head>
+<body>
+    {% if IS_STAGING | default(False) %}
+    <div class="staging-warning">
+        ACHTUNG: Dies ist nicht unsere offizielle Website, sondern
+        unsere Testumgebung!  Unsere offizelle Website ist
+        unter <a href="//fsfw-dresden.de/index.html">fsfw-dresden.de</a>
+        zu finden.
+    </div>
+    {% endif %}
+    <header id="banner">
+        <div id="banner-container">
+          <a id="sitelogo" href="./index.html" title="Zur Startseite"><img src="{{ SITEURL }}/img/sitelogo.svg" title="FSFW-Logo"></a>
+            <ul id="mobile-navigation" class="navigation">
+                <li class="nav-icon facebook-blue"><a href="https://facebook.com/fsfwdresden">
+                    <i class="fa fa-lg logo-facebook l-svg" title="Unsere Facebook-Seite">&nbsp;</i>
+                </a></li><li class="nav-icon twitter-blue"><a href="https://twitter.com/fsfwdresden">
+                    <i class="fa fa-lg logo-twitter l-svg" title="Unser Twitter-Account">&nbsp;</i>
+                </a></li><li class="nav-icon diaspora-grey"><a href="https://jenaspora.de/u/fsfw_dresden">
+                    <i class="fa fa-lg logo-diaspora l-svg" title="Unser Diaspora-Account">&nbsp;</i>
+                </a></li><li class="nav-icon github-black"><a href="https://github.com/fsfw-dresden">
+                    <i class="fa fa-lg logo-github l-svg" title="Unsere GitHub-Organisation">&nbsp;</i>
+                </a></li><li class="nav-icon turquoise"><a href="mailto:kontakt@fsfw-dresden.de">
+                    <i class="fa fa-lg logo-envelope l-svg" title="Kontakt per E-Mail aufnehmen">&nbsp;</i>
+                </a></li>
+            </ul>
+        </div>
+    </header>
+    <nav>
+        <div id="navigation-area">
+            <a id="sticky-sitelogo" href="./index.html" title="Zur Startseite"><img src="./img/navlogo.svg" title="FSFW-Logo"></a>
+            <ul id="navigation" class="navigation">
+                <li class="turquoise"><a href="./index.html">Start</a></li><!--
+                --><li class="violet"><a href="./themen.html">Themen</a></li><!--
+                --><li class="green"><a href="./programm.html">Programm</a></li><!--
+                --><li class="turquoise"><a href="//wiki.fsfw-dresden.de">Wiki</a></li>
+            </ul>
+            <ul id="share-navigation" class="navigation">
+                <li class="nav-icon facebook-blue"><a href="https://facebook.com/fsfwdresden">
+                    <i class="fa fa-lg logo-facebook l-svg" title="Unsere Facebook-Seite">&nbsp;</i>
+                    <span class="hidden">Facebook</span>
+                </a><a id="facebook-note" href="https://wiki.fsfw-dresden.de/doku.php/positionen/position_zu_facebook">Bitte beachte auch unsere Position zu Facebook.</a></li><!--
+                --><li class="nav-icon twitter-blue"><a href="https://twitter.com/fsfwdresden">
+                    <i class="fa fa-lg logo-twitter l-svg" title="Unser Twitter-Account">&nbsp;</i>
+                    <span class="hidden">Twitter</span>
+                </a></li><!--
+                --><li class="nav-icon diaspora-grey"><a href="https://jenaspora.de/u/fsfw_dresden">
+                    <i class="fa fa-lg logo-diaspora l-svg" title="Unser Diaspora-Account">&nbsp;</i>
+                    <span class="hidden">Diaspora</span>
+                </a></li><!--
+                --><li class="nav-icon github-black"><a href="https://github.com/fsfw-dresden">
+                    <i class="fa fa-lg logo-github l-svg" title="Unsere GitHub-Organisation">&nbsp;</i>
+                    <span class="hidden">Github</span>
+                </a></li><!--
+                --><li class="nav-icon turquoise"><a href="mailto:kontakt@fsfw-dresden.de">
+                    <i class="fa fa-lg logo-envelope l-svg" title="Kontakt per E-Mail aufnehmen">&nbsp;</i>
+                    <span class="hidden">E-Mail</span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="content-container" class="nopadding">{% block content %}<strong>Fill the "content" block!</strong>{% endblock %}</div>
+    <footer class="legal-links">
+        <ul class="navigation">
+            <li class="turquoise"><a href="./impressum.html">Impressum</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
