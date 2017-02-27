@@ -489,11 +489,18 @@ footer.legal-links a {
 div.staging-warning {
     display: block;
     position: absolute;
-    font-size: 150%;
     left: 0;
     top: 0;
     background: red;
     z-index: 100; /* assure it is always on top */
+}
+
+div.staging-warning p {
+    margin: 0;
+}
+
+div.staging-warning .notice {
+    font-size: 150%;
 }
 
 /** logos actually used as svg **/
