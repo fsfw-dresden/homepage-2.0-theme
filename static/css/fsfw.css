@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'TitilliumWebRegular';
-    src: url('/theme/font/TitilliumWebRegular.eot');
-    src: local('TitilliumWebRegular'), url('/theme/font/TitilliumWebRegular.woff') format('woff'), url('/theme/font/TitilliumWebRegular.ttf') format('truetype');
+    src: url('../font/TitilliumWebRegular.eot');
+    src: local('TitilliumWebRegular'), url('../font/TitilliumWebRegular.woff') format('woff'), url('../font/TitilliumWebRegular.ttf') format('truetype');
 }
 
 html {
@@ -30,7 +30,7 @@ video {
     display: block;
     width: 100%;
     height: 160px; /* exact height to match the banner image */
-    background: url('/theme/img/banner.png') repeat-x;
+    background: url(../img/banner.png) repeat-x;
     overflow: visible;
     z-index: 2;         /* to make the #sitelogo overlap the rest */
     position: relative; /* z-index only affects positioned elements */
