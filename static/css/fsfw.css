@@ -271,6 +271,11 @@ a#facebook-note:focus, a#facebook-note:hover, a#facebook-note:active {
     }
 }
 
+
+ol.nonumber > li {
+    list-style-type: none;
+}
+
 /********** content area **********/
 
 #content-container {
