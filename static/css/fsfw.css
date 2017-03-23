@@ -372,6 +372,25 @@ a:focus:visited {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+/********** special rules for blog.html **********/
+
+#post-list {
+    list-style-type: none;
+}
+
+footer.post-info {
+    margin-left: 2rem;
+    color: #666;
+}
+
+time.published {
+    display: inline;
+}
+
+article.hentry {
+    margin-bottom: 2.5rem;
+}
+
 /********** special rules for programm.html **********/
 
 .abstract p {
@@ -444,36 +463,36 @@ p.conclusion {
     font-weight: bold;
 }
 
-footer {
+footer.image-license {
     min-height: 3rem;
     background: #E8E8E8;
     padding: 0.5rem 1rem;
     box-sizing: border-box;
 }
 
-footer h2 {
+footer.image-license h2 {
     margin: 0.5rem 1rem;
     font-size: 1rem;
 }
 
-footer ul#imagecredit {
+footer.image-license ul#imagecredit {
     margin: 0.5rem 1rem;
     padding-left: 0.5rem;
     list-style: none;
     font-size: 0.8rem;
 }
 
-footer ul#imagecredit li {
+footer.image-license ul#imagecredit li {
     padding: 0 0.5rem;
 }
 
-footer p.version {
+footer.image-license p.version {
     margin: 0.5rem 1rem;
     padding-left 0.5rem;
     font-size: 0.8rem;
 }
 
-footer ul#imagecredit li:target {
+footer.image-license ul#imagecredit li:target {
     display: inline-block;
     background: #CCC;
 }
@@ -485,6 +504,9 @@ footer.legal-links {
     box-shadow: 0 0 3px #CCC;
     width: 100%;
     text-align: center;
+    min-height: 3rem;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
 }
 
 footer.legal-links ul {

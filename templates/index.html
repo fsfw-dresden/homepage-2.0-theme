@@ -9,11 +9,11 @@
       <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
       <footer class="post-info">
         <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
-        <address class="vcard author">By
+        <span class="vcard author">von
           {% for author in article.authors %}
-          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}" title="Alle Artikel vom Autoren/von der Autorin anzeigen.">{{ author }}</a>
           {% endfor %}
-        </address>
+        </span>
       </footer><!-- /.post-info -->
       <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
     </article></li>
