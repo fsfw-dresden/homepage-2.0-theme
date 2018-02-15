@@ -630,7 +630,7 @@ a:hover > .fa {
 	border-bottom: 2px solid #6BBB00;
 }
 
-span[datetime] {
+section.news span[datetime] {
 	float: right;
 	margin-right: 0.5ex;
 	font-family: monospace;
