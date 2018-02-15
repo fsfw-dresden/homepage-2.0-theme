@@ -220,6 +220,19 @@ a#facebook-note:focus, a#facebook-note:hover, a#facebook-note:active {
     color: white;
 }
 
+/* hometoc */
+
+nav.hometoc {
+    float: right;
+    margin-top: 0 !important;
+    position: static;
+    width: 15em;
+}
+
+nav.hometoc > ul {
+    list-style-type: none;
+    padding-left: 1.5em;
+}
 /********** condensed header layout for mobile **********/
 
 /* This reverts some rules below, which apply to the content area, through !important. */
