@@ -1,7 +1,4 @@
-{% extends "base.html" %}
-{% block title %}{{ page.title }} &ndash; {{ super() }}{%endblock%}
+{% extends "page_raw.html" %}
 {% block content %}
-{% import 'translations.html' as translations with context %}
-{{ translations.translations_for(page) }}
-{{ page.content }}
+<section>{% super() %}</section>
 {% endblock %}
