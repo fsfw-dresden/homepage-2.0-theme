@@ -399,6 +399,9 @@ footer.post-info {
 div.post-info {
     margin-left: 2rem;
     color: #666;
+}
+
+div.post-info span {
     float: right;
 }
 
