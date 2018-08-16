@@ -1,15 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 <section id="blogpost">
-  <header>
-    <h1>{{ article.title }}</h1>
-    <span class="post-info">
-      <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time> von
-      {% for author in article.authors %}
-      <a class="url fn" href="{{ SITEURL }}/{{ author.url }}" title="Alle Artikel vom Autoren/von der Autorin anzeigen.">{{ author }}</a>
-      {% endfor %}
-    </span>
-  </header>
+  <h1>{{ article.title }}</h1>
+  <div class="post-info">
+    <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time> von
+    {% for author in article.authors %}
+    <a class="url fn" href="{{ SITEURL }}/{{ author.url }}" title="Alle Artikel vom Autoren/von der Autorin anzeigen.">{{ author }}</a>
+    {% endfor %}
+  </div>
   {{ article.content }}
 </section>
 {% endblock %}

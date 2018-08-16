@@ -396,9 +396,10 @@ footer.post-info {
     color: #666;
 }
 
-span.post-info {
+div.post-info {
     margin-left: 2rem;
     color: #666;
+    float: right;
 }
 
 time.published {
