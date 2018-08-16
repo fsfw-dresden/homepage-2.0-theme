@@ -396,6 +396,11 @@ footer.post-info {
     color: #666;
 }
 
+span.post-info {
+    margin-left: 2rem;
+    color: #666;
+}
+
 time.published {
     display: inline;
 }
