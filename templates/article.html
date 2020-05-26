@@ -1,7 +1,33 @@
 {% extends "base.html" %}
+{% block richpreview %}
+<!-- Primary Meta Tags -->
+<meta name="title" content="{{ article.title }}">
+<meta name="description" content="{{ article.xsummary }}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
+<meta property="og:title" content="{{ article.title }}">
+<meta property="og:description" content="{{ article.Summary }}">
+{% if article.img_url %}
+<meta property="og:image" content="{{article.img_url}}">
+{% endif %}
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{ SITEURL }}/{{ article.url }}">
+<meta property="twitter:title" content="{{ article.title }}">
+<meta property="twitter:description" content="{{ article.Summary }}">
+{% if article.img_url %}
+<meta property="twitter:image" content="{{article.img_url}}">
+{% endif %}
+{% endblock %}
 {% block content %}
 <section id="blogpost">
   <h1>{{ article.title }}</h1>
+  {% if article.img_url %}
+  <p><img alt="title image" src="{{article.img_url}}" style="width: 100%;"></p>
+  {% endif %}
   <div class="post-info">
     <span>
       <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time> von

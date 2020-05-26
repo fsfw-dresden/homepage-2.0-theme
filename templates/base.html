@@ -17,6 +17,8 @@
     <link rel="alternate" type="application/rss+xml" href="{{ SITEURL }}/feeds/all.rss.xml" title="Alle Posts von FSFW Dresden als RSS-Feed">
     <link rel="alternate" type="application/atom+xml" href="{{ SITEURL }}/feeds/all.atom.xml" title="Alle Posts von FSFW Dresden als Atom-Feed">
     {% endblock %}
+    {% block richpreview %}
+    {% endblock %}
   </head>
 <body>
     {% if IS_STAGING | default(False) %}
