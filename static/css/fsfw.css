@@ -299,6 +299,8 @@ nav.hometoc > ul {
 
 #content-container > section > * {
     margin: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 #content-container > section:not(.notopmargin):first-child > *:first-child {
     /* this placement is a bit more complicated because it needs to take the
